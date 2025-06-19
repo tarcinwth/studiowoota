@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -64,15 +66,15 @@ export default function DesignService() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
+                asChild
               >
-                Ver Portfólio
-                <Eye className="ml-2 w-5 h-5" />
+                <Link href="/portfolio">Ver Portfólio<Eye className="ml-2 w-5 h-5" /></Link>
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-green-600 font-semibold px-8 py-4 rounded-full text-lg border-2 border-green-500 shadow-md focus:ring-2 focus:ring-green-500"
+                onClick={() => window.open('https://wa.me/SEU_NUMERO_AQUI', '_blank')}
               >
                 Solicitar Orçamento
               </Button>
@@ -304,19 +306,54 @@ export default function DesignService() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
-            {["Figma", "Adobe XD", "Sketch", "Photoshop", "Illustrator", "After Effects"].map((tool) => (
-              <Card
-                key={tool}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300"
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Figma className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="font-semibold text-sm text-white">{tool}</h3>
-                </CardContent>
-              </Card>
-            ))}
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl group">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Figma className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Figma</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl group">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Adobe XD</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl group">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Layers className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Sketch</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl group">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Palette className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Photoshop</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl group">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Palette className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Illustrator</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl group">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">After Effects</h3>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -335,28 +372,28 @@ export default function DesignService() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Essencial */}
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-white">Essencial</h3>
-                  <div className="text-4xl font-black mb-4 text-white">R$ 1.500</div>
+                  <div className="text-4xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 1.500</div>
                   <p className="text-white">Para projetos simples</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Design de até 3 telas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Versão mobile e desktop</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">2 revisões incluídas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Entrega em 7 dias</span>
                   </li>
                 </ul>
@@ -365,35 +402,35 @@ export default function DesignService() {
             </Card>
 
             {/* Profissional */}
-            <Card className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl relative">
+            <Card className="bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/10 transition-all duration-500 rounded-3xl group relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-white text-black font-semibold px-4 py-1">Recomendado</Badge>
               </div>
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-white">Profissional</h3>
-                  <div className="text-4xl font-black mb-4 text-white">R$ 3.500</div>
+                  <div className="text-4xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 3.500</div>
                   <p className="text-white">Solução completa</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Design de até 10 telas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Protótipo interativo</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Design system básico</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">5 revisões incluídas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Entrega em 14 dias</span>
                   </li>
                 </ul>
@@ -402,32 +439,32 @@ export default function DesignService() {
             </Card>
 
             {/* Premium */}
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-white">Premium</h3>
-                  <div className="text-4xl font-black mb-4 text-white">R$ 7.000+</div>
+                  <div className="text-4xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 7.000+</div>
                   <p className="text-white">Projeto customizado</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Telas ilimitadas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Design system completo</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Branding incluído</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Revisões ilimitadas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Suporte pós-entrega</span>
                   </li>
                 </ul>
@@ -461,8 +498,7 @@ export default function DesignService() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
               >
                 Ver Portfólio
               </Button>
@@ -470,6 +506,60 @@ export default function DesignService() {
           </div>
         </div>
       </section>
+
+      <footer className="py-16 px-6 border-t border-white/10">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                  <span className="text-black font-bold text-xl">W</span>
+                </div>
+                <span className="text-2xl font-bold">Woota Studio</span>
+              </div>
+              <p className="text-gray-400 max-w-md">
+                Criamos experiências digitais únicas que transformam negócios e conectam marcas com seus públicos.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Serviços</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li>
+                  <Link href="/services/websites" className="hover:text-white transition-colors">
+                    Websites
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/design" className="hover:text-white transition-colors">
+                    Web Design
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/social" className="hover:text-white transition-colors">
+                    Redes Sociais
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/media" className="hover:text-white transition-colors">
+                    Edição de Mídia
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contato</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li>contato@wootastudio.com</li>
+                <li>+55 (11) 99999-9999</li>
+                <li>São Paulo, Brasil</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} Woota Studio. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

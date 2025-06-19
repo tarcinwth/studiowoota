@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -68,15 +70,15 @@ export default function MediaService() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
+                asChild
               >
-                Ver Portfólio
-                <Film className="ml-2 w-5 h-5" />
+                <Link href="/portfolio">Ver Portfólio<Film className="ml-2 w-5 h-5" /></Link>
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-green-600 font-semibold px-8 py-4 rounded-full text-lg border-2 border-green-500 shadow-md focus:ring-2 focus:ring-green-500"
+                onClick={() => window.open('https://wa.me/SEU_NUMERO_AQUI', '_blank')}
               >
                 Solicitar Orçamento
               </Button>
@@ -98,9 +100,9 @@ export default function MediaService() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl group hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <ImageIcon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Edição de Fotos</h3>
@@ -122,9 +124,9 @@ export default function MediaService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl group hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Video className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Edição de Vídeos</h3>
@@ -145,9 +147,9 @@ export default function MediaService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl group hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Palette className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Color Grading</h3>
@@ -168,9 +170,9 @@ export default function MediaService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl group hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Motion Graphics</h3>
@@ -191,9 +193,9 @@ export default function MediaService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl group hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Music className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Áudio Profissional</h3>
@@ -214,9 +216,9 @@ export default function MediaService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl group hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Conteúdo Premium</h3>
@@ -307,21 +309,54 @@ export default function MediaService() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
-            {["Photoshop", "Lightroom", "Premiere Pro", "After Effects", "DaVinci Resolve", "Final Cut"].map(
-              (software) => (
-                <Card
-                  key={software}
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300"
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Edit className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="font-semibold text-sm text-white">{software}</h3>
-                  </CardContent>
-                </Card>
-              ),
-            )}
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-2xl">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Palette className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Photoshop</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-2xl">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Lightroom</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-2xl">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Film className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Premiere Pro</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-2xl">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Video className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">After Effects</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-2xl">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">DaVinci Resolve</h3>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-2xl">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Edit className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-sm text-white">Final Cut</h3>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -338,31 +373,31 @@ export default function MediaService() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Photo Editing */}
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <ImageIcon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-white">Edição de Fotos</h3>
-                  <div className="text-3xl font-black mb-4 text-white">R$ 25<span className="text-lg font-normal text-white">/foto</span></div>
+                  <div className="text-3xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 25<span className="text-lg font-normal text-white">/foto</span></div>
                   <p className="text-white">Tratamento profissional</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Correção de cores</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Retoque básico</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Ajustes de exposição</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Entrega em 24h</span>
                   </li>
                 </ul>
@@ -413,35 +448,35 @@ export default function MediaService() {
             </Card>
 
             {/* Premium Package */}
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Award className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-white">Pacote Premium</h3>
-                  <div className="text-3xl font-black mb-4 text-white">R$ 2.500<span className="text-lg font-normal text-white">/projeto</span></div>
+                  <div className="text-3xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 2.500<span className="text-lg font-normal text-white">/projeto</span></div>
                   <p className="text-white">Solução completa</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Edição completa</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Motion graphics</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Áudio profissional</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Revisões ilimitadas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Suporte dedicado</span>
                   </li>
                 </ul>
@@ -475,15 +510,69 @@ export default function MediaService() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
+                asChild
               >
-                Ver Exemplos
+                <Link href="/portfolio">Ver Exemplos</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      <footer className="py-16 px-6 border-t border-white/10">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                  <span className="text-black font-bold text-xl">W</span>
+                </div>
+                <span className="text-2xl font-bold">Woota Studio</span>
+              </div>
+              <p className="text-gray-400 max-w-md">
+                Criamos experiências digitais únicas que transformam negócios e conectam marcas com seus públicos.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Serviços</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li>
+                  <Link href="/services/websites" className="hover:text-white transition-colors">
+                    Websites
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/design" className="hover:text-white transition-colors">
+                    Web Design
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/social" className="hover:text-white transition-colors">
+                    Redes Sociais
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/media" className="hover:text-white transition-colors">
+                    Edição de Mídia
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contato</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li>contato@wootastudio.com</li>
+                <li>+55 (11) 99999-9999</li>
+                <li>São Paulo, Brasil</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} Woota Studio. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

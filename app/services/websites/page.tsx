@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -7,12 +9,12 @@ import {
   Check,
   Zap,
   Shield,
-  Smartphone,
   Search,
   BarChart3,
   Code,
   Users,
   ArrowRight,
+  Smartphone,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -64,16 +66,17 @@ export default function WebsitesService() {
               <Button
                 size="lg"
                 className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg"
+                onClick={() => window.open('https://wa.me/SEU_NUMERO_AQUI', '_blank')}
               >
                 Solicitar Orçamento
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
+                asChild
               >
-                Ver Exemplos
+                <Link href="/portfolio">Ver Exemplos</Link>
               </Button>
             </div>
           </div>
@@ -84,9 +87,9 @@ export default function WebsitesService() {
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Smartphone className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">100% Responsivo</h3>
@@ -96,9 +99,9 @@ export default function WebsitesService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Performance Otimizada</h3>
@@ -108,9 +111,9 @@ export default function WebsitesService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Search className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">SEO Avançado</h3>
@@ -120,9 +123,9 @@ export default function WebsitesService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Segurança Máxima</h3>
@@ -132,9 +135,9 @@ export default function WebsitesService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Analytics Integrado</h3>
@@ -144,9 +147,9 @@ export default function WebsitesService() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Suporte Contínuo</h3>
@@ -227,9 +230,9 @@ export default function WebsitesService() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
             {["React", "Next.js", "TypeScript", "Tailwind", "Node.js", "MongoDB"].map((tech) => (
-              <Card key={tech} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl">
+              <Card key={tech} className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-2xl group">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Code className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-white">{tech}</h3>
@@ -252,28 +255,28 @@ export default function WebsitesService() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Basic */}
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-white">Básico</h3>
-                  <div className="text-4xl font-black mb-4 text-white">R$ 2.500</div>
+                  <div className="text-4xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 2.500</div>
                   <p className="text-white">Ideal para pequenos negócios</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Até 5 páginas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Design responsivo</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">SEO básico</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Formulário de contato</span>
                   </li>
                 </ul>
@@ -282,35 +285,35 @@ export default function WebsitesService() {
             </Card>
 
             {/* Professional */}
-            <Card className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl relative">
+            <Card className="bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/10 transition-all duration-500 rounded-3xl group relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-white text-black font-semibold px-4 py-1">Mais Popular</Badge>
               </div>
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-white">Profissional</h3>
-                  <div className="text-4xl font-black mb-4 text-white">R$ 5.000</div>
+                  <div className="text-4xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 5.000</div>
                   <p className="text-white">Para empresas em crescimento</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Até 15 páginas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Design personalizado</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">SEO avançado</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Integração com CMS</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Analytics integrado</span>
                   </li>
                 </ul>
@@ -319,32 +322,32 @@ export default function WebsitesService() {
             </Card>
 
             {/* Enterprise */}
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-white">Enterprise</h3>
-                  <div className="text-4xl font-black mb-4 text-white">R$ 10.000+</div>
+                  <div className="text-4xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 10.000+</div>
                   <p className="text-white">Soluções corporativas</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Páginas ilimitadas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Funcionalidades customizadas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Integrações avançadas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Suporte prioritário</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Consultoria estratégica</span>
                   </li>
                 </ul>
@@ -372,14 +375,15 @@ export default function WebsitesService() {
               <Button
                 size="lg"
                 className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg"
+                onClick={() => window.open('https://wa.me/SEU_NUMERO_AQUI', '_blank')}
               >
                 Solicitar Orçamento
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-green-500 text-white hover:bg-green-600 font-semibold px-8 py-4 rounded-full text-lg border-2 border-green-500 shadow-md focus:ring-2 focus:ring-green-500"
+                onClick={() => window.open('https://wa.me/SEU_NUMERO_AQUI', '_blank')}
               >
                 Falar no WhatsApp
               </Button>
@@ -387,6 +391,60 @@ export default function WebsitesService() {
           </div>
         </div>
       </section>
+
+      <footer className="py-16 px-6 border-t border-white/10">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                  <span className="text-black font-bold text-xl">W</span>
+                </div>
+                <span className="text-2xl font-bold">Woota Studio</span>
+              </div>
+              <p className="text-gray-400 max-w-md">
+                Criamos experiências digitais únicas que transformam negócios e conectam marcas com seus públicos.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Serviços</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li>
+                  <Link href="/services/websites" className="hover:text-white transition-colors">
+                    Websites
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/design" className="hover:text-white transition-colors">
+                    Web Design
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/social" className="hover:text-white transition-colors">
+                    Redes Sociais
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/media" className="hover:text-white transition-colors">
+                    Edição de Mídia
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contato</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li>contato@wootastudio.com</li>
+                <li>+55 (11) 99999-9999</li>
+                <li>São Paulo, Brasil</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} Woota Studio. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

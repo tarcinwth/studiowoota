@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Globe, Palette, Share2, Camera, Play, ArrowRight, ArrowDown, Sparkles, Zap } from "lucide-react"
@@ -84,18 +86,20 @@ export default function WootaStudioHome() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button
-                size="lg"
-                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg group"
-              >
-                Ver Nossos Trabalhos
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/portfolio" passHref legacyBehavior>
+                <Button
+                  size="lg"
+                  className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white group"
+                >
+                  Ver Nossos Trabalhos
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
 
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
+                onClick={() => window.open('https://wa.me/SEU_NUMERO_AQUI', '_blank')}
               >
                 Iniciar Conversa
               </Button>
@@ -313,13 +317,14 @@ export default function WootaStudioHome() {
                 Iniciar Projeto
                 <Zap className="ml-2 w-5 h-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
-              >
-                Ver Portfólio
-              </Button>
+              <Link href="/portfolio" passHref legacyBehavior>
+                <Button
+                  size="lg"
+                  className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
+                >
+                  Ver Portfólio
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

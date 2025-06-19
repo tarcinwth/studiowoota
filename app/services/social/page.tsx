@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -66,17 +68,17 @@ export default function SocialService() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
               >
                 Começar Agora
                 <TrendingUp className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
+                asChild
               >
-                Ver Cases
+                <Link href="/portfolio">Ver Cases</Link>
               </Button>
             </div>
           </div>
@@ -196,9 +198,9 @@ export default function SocialService() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Calendar className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Planejamento de Conteúdo</h3>
@@ -208,24 +210,24 @@ export default function SocialService() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-100">
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Calendário editorial mensal</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Estratégia de hashtags</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Análise de concorrentes</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Camera className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Criação de Conteúdo</h3>
@@ -234,24 +236,24 @@ export default function SocialService() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-100">
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Posts e stories criativos</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Vídeos e reels</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Copywriting persuasivo</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <MessageCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Gestão de Comunidade</h3>
@@ -261,24 +263,24 @@ export default function SocialService() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-100">
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Resposta a comentários</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Gestão de DMs</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Monitoramento 24/7</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Analytics e Relatórios</h3>
@@ -287,24 +289,24 @@ export default function SocialService() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-100">
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Relatórios mensais</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Métricas de engajamento</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">ROI das campanhas</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Campanhas Pagas</h3>
@@ -313,24 +315,24 @@ export default function SocialService() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-100">
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Facebook e Instagram Ads</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">LinkedIn Ads</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Otimização contínua</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">Influencer Marketing</h3>
@@ -339,15 +341,15 @@ export default function SocialService() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-100">
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Seleção de influenciadores</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Negociação de parcerias</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Acompanhamento de resultados</span>
                   </li>
                 </ul>
@@ -371,28 +373,28 @@ export default function SocialService() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Starter */}
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-white">Starter</h3>
-                  <div className="text-4xl font-black mb-4 text-white">R$ 1.200<span className="text-lg font-normal text-white">/mês</span></div>
+                  <div className="text-4xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 1.200<span className="text-lg font-normal text-white">/mês</span></div>
                   <p className="text-white">Para pequenos negócios</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">2 redes sociais</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">12 posts por mês</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Stories semanais</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Relatório mensal</span>
                   </li>
                 </ul>
@@ -413,23 +415,23 @@ export default function SocialService() {
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">4 redes sociais</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">20 posts por mês</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Stories diários</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Reels semanais</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Gestão de comunidade</span>
                   </li>
                 </ul>
@@ -438,32 +440,32 @@ export default function SocialService() {
             </Card>
 
             {/* Pro */}
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl group">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-white">Pro</h3>
-                  <div className="text-4xl font-black mb-4 text-white">R$ 4.500<span className="text-lg font-normal text-white">/mês</span></div>
+                  <div className="text-4xl font-black mb-4 text-white group-hover:scale-110 transition-transform duration-300">R$ 4.500<span className="text-lg font-normal text-white">/mês</span></div>
                   <p className="text-white">Solução completa</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Redes ilimitadas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">30+ posts por mês</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Campanhas pagas incluídas</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Influencer marketing</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-white" />
+                    <Check className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                     <span className="text-white">Consultoria estratégica</span>
                   </li>
                 </ul>
@@ -490,15 +492,15 @@ export default function SocialService() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
               >
                 Começar Agora
                 <Zap className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm font-semibold px-8 py-4 rounded-full text-lg"
+                className="bg-green-500 text-white hover:bg-green-600 font-semibold px-8 py-4 rounded-full text-lg border-2 border-green-500 shadow-md focus:ring-2 focus:ring-green-500"
+                onClick={() => window.open('https://wa.me/SEU_NUMERO_AQUI', '_blank')}
               >
                 Agendar Consultoria
               </Button>
@@ -506,6 +508,60 @@ export default function SocialService() {
           </div>
         </div>
       </section>
+
+      <footer className="py-16 px-6 border-t border-white/10">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                  <span className="text-black font-bold text-xl">W</span>
+                </div>
+                <span className="text-2xl font-bold">Woota Studio</span>
+              </div>
+              <p className="text-gray-400 max-w-md">
+                Criamos experiências digitais únicas que transformam negócios e conectam marcas com seus públicos.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Serviços</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li>
+                  <Link href="/services/websites" className="hover:text-white transition-colors">
+                    Websites
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/design" className="hover:text-white transition-colors">
+                    Web Design
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/social" className="hover:text-white transition-colors">
+                    Redes Sociais
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/media" className="hover:text-white transition-colors">
+                    Edição de Mídia
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contato</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li>contato@wootastudio.com</li>
+                <li>+55 (11) 99999-9999</li>
+                <li>São Paulo, Brasil</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} Woota Studio. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
