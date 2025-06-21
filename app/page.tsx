@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Globe, Palette, Share2, Camera, Play, ArrowRight, ArrowDown, Sparkles, Zap } from "lucide-react"
+import { Globe, Palette, Share2, Camera, ArrowRight, ArrowDown, Sparkles } from "lucide-react"
 import Link from "next/link"
+import CtaButtons from "@/components/home/CtaButtons"
 
 export default function WootaStudioHome() {
   return (
@@ -44,67 +44,7 @@ export default function WootaStudioHome() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Link href="/portfolio" passHref legacyBehavior>
-                <Button
-                  size="lg"
-                  className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white group"
-                >
-                  Ver Nossos Trabalhos
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-
-              <Button
-                size="lg"
-                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
-                onClick={() => window.open('https://wa.me/SEU_NUMERO_AQUI', '_blank')}
-              >
-                Iniciar Conversa
-              </Button>
-            </div>
-
-            {/* Services Preview */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <Link href="/services/websites" className="group">
-                <Card className="bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl">
-                  <CardContent className="p-6 text-center">
-                    <Globe className="w-8 h-8 mx-auto mb-3 text-white group-hover:scale-110 transition-transform" />
-                    <h3 className="font-semibold text-sm text-white">Websites</h3>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/services/design" className="group">
-                <Card className="bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl">
-                  <CardContent className="p-6 text-center">
-                    <Palette className="w-8 h-8 mx-auto mb-3 text-white group-hover:scale-110 transition-transform" />
-                    <h3 className="font-semibold text-sm text-white">Design</h3>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/services/social" className="group">
-                <Card className="bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl">
-                  <CardContent className="p-6 text-center">
-                    <Share2 className="w-8 h-8 mx-auto mb-3 text-white group-hover:scale-110 transition-transform" />
-                    <h3 className="font-semibold text-sm text-white">Social</h3>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/services/media" className="group">
-                <Card className="bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl">
-                  <CardContent className="p-6 text-center">
-                    <div className="flex justify-center mb-3">
-                      <Camera className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
-                      <Play className="w-6 h-6 text-white group-hover:scale-110 transition-transform ml-1" />
-                    </div>
-                    <h3 className="font-semibold text-sm text-white">Mídia</h3>
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
+            <CtaButtons />
           </div>
         </div>
 
@@ -133,97 +73,93 @@ export default function WootaStudioHome() {
             <Link href="/services/websites" className="group">
               <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl overflow-hidden h-full">
                 <CardContent className="p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
                       <Globe className="w-8 h-8 text-white" />
                     </div>
-                    <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                    <div>
+                      <h3 className="text-2xl font-bold">Websites</h3>
+                      <p className="text-gray-400">Modernos e Responsivos</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">Criação de Websites</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">
-                    Desenvolvemos websites modernos, responsivos e otimizados para conversão. Do conceito ao lançamento,
-                    criamos experiências digitais que impressionam.
+                  <p className="text-gray-300 mb-6">
+                    Desenvolvemos websites de alta performance, focados em experiência de usuário e otimizados para
+                    conversão.
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">React</span>
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Next.js</span>
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">SEO</span>
-                  </div>
+                  <span className="font-semibold text-white flex items-center">
+                    Saber Mais <ArrowRight className="ml-2 w-4 h-4" />
+                  </span>
                 </CardContent>
               </Card>
             </Link>
 
-            {/* Design */}
+            {/* Web Design */}
             <Link href="/services/design" className="group">
               <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl overflow-hidden h-full">
                 <CardContent className="p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
                       <Palette className="w-8 h-8 text-white" />
                     </div>
-                    <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                    <div>
+                      <h3 className="text-2xl font-bold">Web Design</h3>
+                      <p className="text-gray-400">UI/UX e Identidade Visual</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">Web Design</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">
-                    Criamos interfaces únicas e experiências visuais marcantes que conectam emocionalmente com seu
-                    público e fortalecem sua marca.
+                  <p className="text-gray-300 mb-6">
+                    Criamos interfaces intuitivas e esteticamente atraentes que fortalecem a identidade da sua marca e
+                    encantam seus clientes.
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">UI/UX</span>
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Figma</span>
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Branding</span>
-                  </div>
+                  <span className="font-semibold text-white flex items-center">
+                    Saber Mais <ArrowRight className="ml-2 w-4 h-4" />
+                  </span>
                 </CardContent>
               </Card>
             </Link>
 
-            {/* Social Media */}
+            {/* Redes Sociais */}
             <Link href="/services/social" className="group">
               <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl overflow-hidden h-full">
                 <CardContent className="p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
                       <Share2 className="w-8 h-8 text-white" />
                     </div>
-                    <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                    <div>
+                      <h3 className="text-2xl font-bold">Redes Sociais</h3>
+                      <p className="text-gray-400">Gerenciamento e Conteúdo</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">Redes Sociais</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">
-                    Gestão estratégica completa das suas redes sociais com conteúdo personalizado que gera engajamento e
-                    converte seguidores em clientes.
+                  <p className="text-gray-300 mb-6">
+                    Gerenciamos suas redes sociais, criando conteúdo relevante que engaja seu público e aumenta sua
+                    visibilidade online.
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Instagram</span>
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">TikTok</span>
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">LinkedIn</span>
-                  </div>
+                  <span className="font-semibold text-white flex items-center">
+                    Saber Mais <ArrowRight className="ml-2 w-4 h-4" />
+                  </span>
                 </CardContent>
               </Card>
             </Link>
 
-            {/* Media Editing */}
+            {/* Edição de Mídia */}
             <Link href="/services/media" className="group">
               <Card className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-500 rounded-3xl overflow-hidden h-full">
                 <CardContent className="p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <div className="flex">
-                        <Camera className="w-6 h-6 text-white mr-1" />
-                        <Play className="w-6 h-6 text-white" />
-                      </div>
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
+                      <Camera className="w-8 h-8 text-white" />
                     </div>
-                    <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                    <div>
+                      <h3 className="text-2xl font-bold">Edição de Mídia</h3>
+                      <p className="text-gray-400">Fotos e Vídeos</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">Edição de Mídia</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">
-                    Edição profissional de fotos e vídeos que destacam sua marca, produtos e serviços com qualidade
-                    cinematográfica.
+                  <p className="text-gray-300 mb-6">
+                    Edição profissional de fotos e vídeos para campanhas, redes sociais e materiais de marketing.
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Photoshop</span>
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">Premiere</span>
-                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">After Effects</span>
-                  </div>
+                  <span className="font-semibold text-white flex items-center">
+                    Saber Mais <ArrowRight className="ml-2 w-4 h-4" />
+                  </span>
                 </CardContent>
               </Card>
             </Link>
@@ -268,23 +204,7 @@ export default function WootaStudioHome() {
               Vamos criar algo extraordinário juntos. Entre em contato e descubra como podemos elevar sua marca ao
               próximo nível.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-lg"
-              >
-                Iniciar Projeto
-                <Zap className="ml-2 w-5 h-5" />
-              </Button>
-              <Link href="/portfolio" passHref legacyBehavior>
-                <Button
-                  size="lg"
-                  className="bg-white text-black hover:bg-gray-200 font-semibold px-8 py-4 rounded-full text-lg border-2 border-white shadow-md focus:ring-2 focus:ring-white"
-                >
-                  Ver Portfólio
-                </Button>
-              </Link>
-            </div>
+            <CtaButtons />
           </div>
         </div>
       </section>

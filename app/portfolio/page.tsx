@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/client/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import DownloadPressKitButton from "@/components/ui/DownloadPressKitButton";
 
@@ -201,20 +201,15 @@ function PortfolioPage() {
     .filter(cat => cat.projetos.length > 0);
 
   // Dados mockados para o press kit
-  const empresa = {
+  const dadosEmpresa = {
     nome: "Woota Studio",
     site: "https://woota.studio",
-    apresentacao: "Somos especialistas em design, mídia, social e websites. Transformamos ideias em experiências digitais de alto impacto.",
+    apresentacao: "Somos um estúdio de design e desenvolvimento focado em criar experiências digitais únicas que elevam marcas e geram resultados extraordinários através de design inovador e tecnologia de ponta.",
     contato: "contato@woota.studio",
-    telefone: "+55 11 99999-9999",
-    local: "São Paulo, SP"
+    telefone: "+55 (11) 99999-9999",
+    local: "São Paulo, Brasil"
   };
-  const servicos = [
-    "Design Gráfico",
-    "Desenvolvimento de Websites",
-    "Gestão de Mídias Sociais",
-    "Produção de Vídeo e Foto"
-  ];
+  const servicos = categorias.map(c => c.nome);
   const projetos = [
     { titulo: "Landing Page Woota", descricao: "Site institucional moderno para apresentação da Woota Studio.", cliente: "Woota Studio", link: "#", destaque: true },
     { titulo: "Campanha Social", descricao: "Gestão de campanha para redes sociais de cliente X.", cliente: "Cliente X", link: "#" }
@@ -245,6 +240,11 @@ function PortfolioPage() {
   const todosProjetosFiltrados = categoriasFiltradas.flatMap(cat => cat.projetos);
   const projetosParaExibir = mostrarMais ? todosProjetosFiltrados : todosProjetosFiltrados.slice(0, 8);
 
+  const equipeExemplo = [
+    { nome: "Seu Nome", cargo: "Fundador & Diretor Criativo", bio: "Com mais de 5 anos de experiência, lidera a visão criativa do estúdio, garantindo que cada projeto seja inovador e impactante." },
+    { nome: "Nome do Sócio", cargo: "Diretor de Tecnologia", bio: "Especialista em desenvolvimento front-end e arquitetura de sistemas, transformando designs em realidade digital." }
+  ];
+
   return (
     <div className="min-h-screen pb-20">
       <section className="pt-32 pb-12 text-center">
@@ -265,10 +265,11 @@ function PortfolioPage() {
           <h2 className="text-4xl font-black text-center text-white">Projetos em Destaque</h2>
           <p className="text-gray-300 text-center max-w-2xl">Conheça alguns dos nossos principais cases, desenvolvidos para diferentes segmentos e clientes. Cada projeto é pensado para gerar resultados reais e fortalecer marcas no ambiente digital.</p>
           <DownloadPressKitButton
-            empresa={empresa}
+            empresa={dadosEmpresa}
             servicos={servicos}
             projetos={projetos}
             depoimentos={depoimentos}
+            equipe={equipeExemplo}
           />
         </div>
         <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
