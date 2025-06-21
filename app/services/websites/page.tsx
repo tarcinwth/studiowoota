@@ -1,11 +1,8 @@
-'use client'
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
   Globe,
-  ArrowLeft,
   Check,
   Zap,
   Shield,
@@ -20,26 +17,7 @@ import Link from "next/link"
 
 export default function WebsitesService() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/80 border-b border-white/10">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-xl">W</span>
-              </div>
-              <span className="text-2xl font-bold tracking-tight">Woota Studio</span>
-            </Link>
-
-            <Link href="/" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              <span>Voltar</span>
-            </Link>
-          </div>
-        </div>
-      </header>
-
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 relative">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -391,60 +369,6 @@ export default function WebsitesService() {
           </div>
         </div>
       </section>
-
-      <footer className="py-16 px-6 border-t border-white/10">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-black font-bold text-xl">W</span>
-                </div>
-                <span className="text-2xl font-bold">Woota Studio</span>
-              </div>
-              <p className="text-gray-400 max-w-md">
-                Criamos experiências digitais únicas que transformam negócios e conectam marcas com seus públicos.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Serviços</h4>
-              <ul className="space-y-3 text-gray-400">
-                <li>
-                  <Link href="/services/websites" className="hover:text-white transition-colors">
-                    Websites
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/design" className="hover:text-white transition-colors">
-                    Web Design
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/social" className="hover:text-white transition-colors">
-                    Redes Sociais
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/media" className="hover:text-white transition-colors">
-                    Edição de Mídia
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contato</h4>
-              <ul className="space-y-3 text-gray-400">
-                <li>contato@wootastudio.com</li>
-                <li>+55 (11) 99999-9999</li>
-                <li>São Paulo, Brasil</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Woota Studio. Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

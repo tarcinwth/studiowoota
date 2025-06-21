@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Globe, Palette, Share2, Camera, Play, ArrowRight, ArrowDown, Sparkles, Zap } from "lucide-react"
@@ -7,46 +5,7 @@ import Link from "next/link"
 
 export default function WootaStudioHome() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Header */}
-      <header className="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/80 border-b border-white/10">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-black font-bold text-xl">W</span>
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full animate-pulse"></div>
-              </div>
-              <span className="text-2xl font-bold tracking-tight">Woota Studio</span>
-            </Link>
-
-            <nav className="hidden lg:flex items-center space-x-8">
-              <Link href="#home" className="text-gray-300 hover:text-white transition-colors font-medium">
-                Início
-              </Link>
-              <Link href="#services" className="text-gray-300 hover:text-white transition-colors font-medium">
-                Serviços
-              </Link>
-              <Link href="#work" className="text-gray-300 hover:text-white transition-colors font-medium">
-                Trabalhos
-              </Link>
-              <Link href="#about" className="text-gray-300 hover:text-white transition-colors font-medium">
-                Sobre
-              </Link>
-              <Link href="#contact" className="text-gray-300 hover:text-white transition-colors font-medium">
-                Contato
-              </Link>
-            </nav>
-
-            <Button className="bg-white text-black hover:bg-gray-100 font-semibold px-6 py-2 rounded-full">
-              Começar Projeto
-            </Button>
-          </div>
-        </div>
-      </header>
-
+    <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
         {/* Background Grid */}
@@ -329,64 +288,6 @@ export default function WootaStudioHome() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-white/10">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-black font-bold text-xl">W</span>
-                </div>
-                <span className="text-2xl font-bold">Woota Studio</span>
-              </div>
-              <p className="text-gray-400 max-w-md">
-                Criamos experiências digitais únicas que transformam negócios e conectam marcas com seus públicos.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Serviços</h4>
-              <ul className="space-y-3 text-gray-400">
-                <li>
-                  <Link href="/services/websites" className="hover:text-white transition-colors">
-                    Websites
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/design" className="hover:text-white transition-colors">
-                    Web Design
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/social" className="hover:text-white transition-colors">
-                    Redes Sociais
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/media" className="hover:text-white transition-colors">
-                    Edição de Mídia
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Contato</h4>
-              <ul className="space-y-3 text-gray-400">
-                <li>contato@wootastudio.com</li>
-                <li>+55 (11) 99999-9999</li>
-                <li>São Paulo, Brasil</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Woota Studio. Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
